@@ -48,7 +48,11 @@ resource "aws_iam_role_policy" "lambda_exec" {
     ]
   })
 }
-
+# Attach the AmazonEventBridgeFullAccess managed policy to the Lambda execution role
+resource "aws_iam_role_policy_attachment" "lambda_eventbridge_full_access" {
+  role       = aws_iam_role.lambda_exec.name
+  policy_arn = "arn:aws:iam::aws:policy/AmazonEventBridgeFullAccess"
+}
 output "lambda_function_arn" {
   value = aws_lambda_function.this.arn
 }
