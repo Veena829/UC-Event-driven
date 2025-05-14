@@ -8,7 +8,7 @@ terraform {
 }
 
 provider "aws" {
-  region = "us-east-1"  # Adjust as necessary
+  region = var.aws_region
 }
 module "eventbridge" {
   source = "./modules/eventbridge"
