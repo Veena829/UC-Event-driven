@@ -1,7 +1,15 @@
-provider "aws" {
-  region = var.aws_region
+terraform {
+  required_providers {
+    aws = {
+      source  = "hashicorp/aws"
+      version = "~> 4.0"  # Specify an appropriate version here
+    }
+  }
 }
 
+provider "aws" {
+  region = "us-east-1"  # Adjust as necessary
+}
 module "eventbridge" {
   source = "./modules/eventbridge"
   #sqs_queues = module.sqs.sqs_queues
