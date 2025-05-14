@@ -6,7 +6,7 @@ terraform {
     }
   }
 
-  required_version = ">= 1.3.0" # Optional, depending on your Terraform CLI version
+  required_version = ">= 1.0.0" # Optional, depending on your Terraform CLI version
 }
 
 provider "aws" {
