@@ -5,7 +5,7 @@ variable "aws_region" {
 }
 
 variable "lambda_function_name" {
-  type    = string
+  type = string
 }
 
 variable "lambda_runtime" {
@@ -14,9 +14,9 @@ variable "lambda_runtime" {
 }
 
 variable "event_bus_name" {
-  type    = string
+  type = string
 }
 
 variable "api_gateway_stage_name" {
-  type    = string
+  type = string
 }
