@@ -1,5 +1,6 @@
 resource "aws_api_gateway_rest_api" "api" {
-  name = "myApi_SQS"
+  name        = "myApi_SQS"
+  description = "My API that integrates with SQS"
 }
 
 resource "aws_api_gateway_resource" "root" {
